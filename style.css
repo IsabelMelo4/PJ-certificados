@@ -1,0 +1,63 @@
+
+    body{
+      font-family: Arial, Helvetica, sans-serif;
+      text-align: center;
+      font-size: 50px;
+      color: rgb(255, 255, 255);
+      background-color: rgb(10, 21, 43);
+      margin: 0;
+      padding: 0;
+    }
+
+
+    #nome{
+      white-space: nowrap; 
+      position: absolute; 
+      top: 500px;
+      left: 1200px;
+      font-size: 20px;
+      font-family: "Montserrat", sans-serif;
+      color: #5271FF
+      
+      }
+      
+      #imagem{
+       
+        position: absolute;
+        align-items: center;
+        margin-left: 1500px;
+        margin-top: 400px;
+        
+      }
+      
+
+     #caixa{
+    font-size: 70px;
+    border-radius: 0.9cm;
+    border-color: rgb(84, 73, 243);
+    margin-right: 800px;
+    margin-top: 200px;
+    
+      }
+
+
+      footer{
+          text-align: center;
+          color: rgb(255, 255, 255);
+          margin-top: 2300px;
+      }
+
+      
+     #gerar{
+      font-size: 70px;
+      border-radius: 0.9cm;
+      border-color: antiquewhite;
+     
+     }
+
+     #baixar{
+      font-size: 70px;
+      border-radius: 0.9cm;
+      border-color: antiquewhite;
+     
+     }

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>gerador de certificado</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    
+        <h1>
+            Gerador Automático de Certificado
+        </h1>
+
+        <input id="caixa" type="text" nome = "nome" placeholder="digite seu nome"> 
+        <button id="baixar" onclick="gerarCertificado()">imprimir Certificado</button>
+
+
+        <section>
+            <div id="imagem">
+                <img id="certificadoImagem" src="assets/Certificado enccri.png" alt="Certificado">
+                <p id="nome">Seu nome aqui</p>
+            </div>
+        </section>
+
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+     <script src="script.js"></script>
+
+</body>
+
+<footer>
+<p> &copy; Isabel Melo </p>
+</footer>
+
+</html>
