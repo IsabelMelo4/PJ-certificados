@@ -22,11 +22,8 @@ document.getElementById("caixa").addEventListener("input", function () {
 function gerarCertificado() {
     const nome = document.getElementById("caixa").value.trim();
     
-    if (nome === "") {
-        alert("Por favor, digite seu nome.");
-        return;
-    }
-
+  
+//ISSO AQUI É A BIBLIOTECA JSPDF
     const { jsPDF } = window.jspdf;
     const doc = new jsPDF("landscape");
 
@@ -50,10 +47,8 @@ function gerarCertificado() {
         doc.text(nome, 200, 90, { align: "center" });
         
         doc.autoPrint();
-        window.open(doc.output("bloburl"), "_blank");
+       window.open(doc.output("bloburl"), "_blank");
     };
 
-    img.onerror = function () {
-        alert("Erro ao carregar a imagem do certificado.");
-    };
+    
 }
