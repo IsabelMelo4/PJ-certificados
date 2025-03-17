@@ -14,10 +14,15 @@
         </h1>
         
    
-        <input type="text"   nome = "nome" id="nome" >
+        <input type="text"   nome = "nome" id="nome" > 
         <input type="button" value="gerar certificado" onclick="gerarcertificado()">
         <input type="button" value="imprimir" onclick="imprimir()">
-        <input type="file" id="uploadimg" onchange="uploadImagem()" accept="image/*">
+
+        <label class="custom-file">
+            Escolher Arquivo
+            <input type="file" id="uploadimg" onchange="uploadImagem()" accept="image/*">
+        </label>
+      
        
 
 
@@ -38,8 +43,7 @@
 
 
 
-
-     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
      <script src="script.js"></script>
 
 </body>
