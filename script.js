@@ -1,54 +1,25 @@
-document.getElementById("caixa").addEventListener("input", function () {
-    const nome = this.value.trim();
-    const nomeElemento = document.getElementById("nome");
+function gerarcertificado(){
+var n = window.document.getElementById('nome')
+var txt = window.document.getElementById('txt')
+var res = String(n.value)
 
-    if (nome === "") {
-        nomeElemento.textContent = "Seu nome aqui";
-        nomeElemento.style.fontSize = "50px"; 
-        return;
-    }
+txt.innerHTML = res
 
-    nomeElemento.textContent = nome;
-
-    let fontSize = 50;
-    nomeElemento.style.fontSize = fontSize + "px";
-
-    while (nomeElemento.scrollWidth > 600 && fontSize > 10) { 
-        fontSize--;
-        nomeElemento.style.fontSize = fontSize + "px";
-    }
-});
-
-function gerarCertificado() {
-    const nome = document.getElementById("caixa").value.trim();
-    
-  
-//ISSO AQUI É A BIBLIOTECA JSPDF
-    const { jsPDF } = window.jspdf;
-    const doc = new jsPDF("landscape");
-
-    const img = new Image();
-    img.src = "assets/Certificado enccri.png";
-
-    img.onload = function () {
-        doc.addImage(img, "PNG", 0, 0, 297, 210); 
-
-        doc.setFont("helvetica", "bold");
-        let fontSize = 40; 
-        doc.setFontSize(fontSize);
-        doc.setTextColor(82, 113, 255); 
-    
-        while (doc.getTextWidth(nome) > 180 && fontSize > 10) {
-            fontSize--;
-            doc.setFontSize(fontSize);
-        }
-
-       
-        doc.text(nome, 200, 90, { align: "center" });
-        
-        doc.autoPrint();
-       window.open(doc.output("bloburl"), "_blank");
-    };
-
-    
 }
+
+function uploadImagem() {
+    var up = document.getElementById('uploadimg');
+    var imgDiv = document.getElementById('img');
+
+    if (up.files.length > 0) {
+        var reader = new FileReader();
+
+        reader.onload = function (e) {
+            imgDiv.innerHTML = `<img src="${e.target.result}">`; 
+        };
+
+        reader.readAsDataURL(up.files[0]);
+    }
+}
+
+

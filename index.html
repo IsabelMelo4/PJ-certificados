@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>gerador de certificado</title>
-<link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -12,17 +12,32 @@
         <h1>
             Gerador Automático de Certificado
         </h1>
+        
+   
+        <input type="text"   nome = "nome" id="nome" >
+        <input type="button" value="gerar certificado" onclick="gerarcertificado()">
+        <input type="button" value="imprimir" onclick="imprimir()">
+        <input type="file" id="uploadimg" onchange="uploadImagem()" accept="image/*">
+       
 
-        <input type="text" nome = "nome" id="caixa"> 
-        <button id="baixar" onclick="gerarCertificado()">imprimir Certificado</button>
 
+        <section id="certificado_container">
 
-        <section>
-            <div id="imagem">
+            <div id="certificado">
                 <img id="certificadoImagem" src="assets/Certificado enccri.png" alt="Certificado">
-                <p id="nome">Seu nome aqui</p>
-            </div>
+                <p id="txt">Seu nome aqui</p>
+
+                <div id="img-container">
+                    <div id="img"></div>
+                </div>
+                
+           
         </section>
+
+
+
+
+
 
      <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
      <script src="script.js"></script>
