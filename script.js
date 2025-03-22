@@ -22,6 +22,8 @@ function uploadImagem() {
     }
 }
 
+//biblioteca jspdf e html2Canvas
+
 function imprimir() {
     const { jsPDF } = window.jspdf;
     const doc = new jsPDF("landscape");
