@@ -10,7 +10,8 @@
     }
 
     #img-container {
-      position: absolute;
+    position: absolute;
+    border-radius: 10%;
     top: 180px;
     left: 478px;  
     width: 210px;
